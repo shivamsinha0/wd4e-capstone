@@ -157,6 +157,11 @@ nav a:focus{
 }
   
 
+  
+#current-page{
+    background-color: #fda86f;
+    border: 3.5px solid #fa9c62;
+}
 
 
 
