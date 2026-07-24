@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important Experiments in Physics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#main_content" class="link_to_main"> Skip to Main Content </a>
+        <i class="fa-solid fa-bars fa-2x" id="nav_button"></i> 
+        <nav id = "nav_bar">  
+        <ul>
+            <li> <a href="index.html"> Home </a></li>
+            <li> <a href="experiments.html"> Important Experiments </a></li>
+            <li> <a href="physicists.html"> Famous Physicists </a></li>
+        </ul>
+        </nav>
+    </header>
+    <main id="main_content">
+        <div class="experiment_section">
+            <h1>Important Experiments</h1>
+            <div id="preview_img_div">
+            <i id = "left_chevron" class="fa-solid fa-chevron-left" onclick="left_scroll(this)"></i>
+            <i id = "right_chevron" class="fa-solid fa-chevron-right" onclick="right_scroll(this)"></i>
+            <i id = "close_btn" class="fa-solid fa-xmark"></i>
+            <img id="preview_img" class="" src="" alt="">
+            <p id="preview_caption"></p>
+            </div>
+            <figure>
+                <img class="image_view" src="Image/CERN_LHC_CMS_15.jpg" alt="Large Hadron Collider">
+                <figcaption> Large Hadron Collider </figcaption>
+            </figure>
+        </div>
+        <p>
+        Experimental Physics is the branch of physics that
+        focuses on observing, measuring, and understanding 
+        natural phenomena through experiments. It involves 
+        designing and conducting tests to verify scientific
+        theories, discover new principles, and explore the 
+        behavior of matter and energy. Experimental physicists
+        use a variety of instruments and technologies,
+        ranging from simple laboratory equipment to
+        advanced particle accelerators and space 
+        telescopes. Their work plays a crucial role in
+        expanding scientific knowledge, improving existing
+        theories, and developing innovative technologies that
+        benefit society. Through careful observation and
+        data analysis, experimental physics helps bridge the gap
+        between theoretical predictions and real-world
+        evidence. Some of the most important experiments 
+        in physics are listed below.
+        </p>
+
+        <ul>   
+            <li>Rømer's determination of the speed of light</li>
+            <li>Cavendish experiment</li>
+            <li>Eötvös experiment</li>
+            <li>Michelson–Morley experiment</li>
+            <li>Oil drop experiment</li>
+            <li>Geiger–Marsden experiment</li>
+            <li>Eddington experiment</li>
+            <li>Franck–Hertz experiment</li>
+            <li>Stern–Gerlach experiment</li>
+            <li>Double-slit experiment</li>
+            <li>Gravity Probe A and Gravity Probe B</li>
+            <li>Bell test experiments</li> 
+        </ul>
+    </main>
+
+    <a href="#main_content" id = "top_link">Jump to the Top</a>
+    <footer>
+        All the images are taken from <a href="https://commons.wikimedia.org/wiki/Main_Page"> Wikimedia Commons </a>
+    </footer>
+</body>
+<script type="text/javascript">
+    document.getElementById("nav_button").addEventListener("click", toggle_nav);
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".image_view").forEach(element => {
+        element.addEventListener("click", image_view);
+    });
+
+    document.getElementById("close_btn").addEventListener("click", image_close);
+});    
+</script>
+</html>

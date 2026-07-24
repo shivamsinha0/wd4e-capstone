@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fields of Physics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="text/javascript" src="js/javascript.js"></script>
+    </head>
+<body>
+    <header>
+        <a href="#main_content" class="link_to_main"> Skip to Main Content </a>
+        <i class="fa-solid fa-bars fa-2x" id="nav_button" alt="Navigation Menu"></i> 
+        <nav id = "nav_bar">  
+        <ul>
+            <li> <a href="index.html"> Home </a></li>
+            <li> <a href="experiments.html"> Important Experiments </a></li>
+            <li> <a href="physicists.html"> Famous Physicists </a></li>
+        </ul>
+        </nav>
+    </header>
+    <main id="main_content">
+        <h1>
+            Physics
+        </h1>
+        <p>
+            Physics is the branch of science that explores matter, energy, motion, force, and the laws 
+            that govern the universe. It studies how objects behave in space and time, from the smallest 
+            particles to massive galaxies. As one of the core scientific disciplines, physics helps us understand 
+            natural phenomena and forms the foundation of many modern technologies.
+       </p>
+       <p>It explains everyday events such as gravity, light, sound, electricity, and magnetism, while also 
+        uncovering deeper mysteries of the cosmos. Physics plays a major role in 
+        advancements in engineering, medicine, communication, and space exploration, making it an essential field 
+        of study in both science and technology.
+        </p>
+        <h1>
+            Fields of Physics
+        </h1>
+        <div id="preview_img_div">
+            <i id = "left_chevron" class="fa-solid fa-chevron-left" onclick="left_scroll(this)"></i>
+            <i id = "right_chevron" class="fa-solid fa-chevron-right" onclick="right_scroll(this)"></i>
+            <i id = "close_btn" class="fa-solid fa-xmark"></i>
+            <img id="preview_img" class="" src="" alt="">
+            <p id="preview_caption"></p>
+        </div>
+        <ul class="fields_physics">
+            <li>
+              <img id = "0" class="image_view" src="Image/Newton's_Cradle.jpg" alt="Newton's Craddle">
+                <p>Classical Mechanics</p>
+            </li>
+            <li>
+                <img id = "1" class="image_view" src="Image/Snowflake_–_Before_and_After_Melting_(Composite,_but_with_square_reshaping).jpg" alt="Snowflake before and after melting">
+               <p> Thermodynamics and Statistical Mechanics</p>
+            </li>
+            <li>
+                <img id = "2" class="image_view" src="Image/Virmalised.jpg" alt="Aurora">
+                <p>Electromagnetism and Photonics</p>
+            </li>
+            
+
+            <li>
+                <img id = "3" class="image_view" src="Image/Quadratic_Chladni_plate.jpg" alt ="Chladni figure">
+                <p> Acoustics</p>
+            </li>
+
+            <li>
+                <img id = "4" class="image_view" src="Image/Optics.jpg" alt="Laser Experiment">
+                <p>Optics</p>
+            </li>
+
+            <li>
+                <img id = "5" class="image_view" src="Image/Spacetime_lattice_analogy_white.svg.png" alt="Spacetime lattice analogy">
+                <p>Theory of Relativity</p>
+            </li>
+
+             <li>
+                <img id = "6" class="image_view" src="Image/Gravitational_lens_found_in_the_DESI_Legacy_Surveys_data_(noirlab2104c).jpg" alt ="Gravitation Lensing">
+                <p>Astrophysics and Cosmology</p>
+            </li>
+
+            <li>
+                <img id = "7" class="image_view" src="Image/Doubleslitexperiment.png" alt ="Double-Slit experiment ">
+                <p>Quantum Mechanics, Atomic Physics, and Molecular Physics</p>
+            </li>
+
+            <li>
+                <img id = "8" class="image_view" src="Image/Meissner_effect_p1390048.jpg" alt="Meissner effect">
+                <p>Condensed Matter Physics</p>
+            </li>
+
+            <li>
+                <img id = "9" class="image_view" src="Image/Feynman_Diagram_-_Negative_Beta_Decay.png" alt="Feynman Diagram">
+                <p>High-energy Particle Physics and Nuclear Physics</p>
+            </li>
+        </ul>
+    </main>
+    <a href="#main_content" id = "top_link">Jump to the Top</a>
+    <footer>
+        All the images are taken from <a href="https://commons.wikimedia.org/wiki/Main_Page"> Wikimedia Commons </a>
+    </footer>
+</body>
+
+
+
+<script type="text/javascript">
+    document.getElementById("nav_button").addEventListener("click", toggle_nav);
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".image_view").forEach(element => {
+        element.addEventListener("click", image_view);
+    });
+
+    document.getElementById("close_btn").addEventListener("click", image_close);
+});    
+
+</script>
+</html>

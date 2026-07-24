@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Physicists</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script type="text/javascript" src="js/javascript.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#main_content" class="link_to_main"> Skip to Main Content </a>
+        <i class="fa-solid fa-bars fa-2x" id="nav_button"></i> 
+        <nav id = "nav_bar">  
+        <ul>
+            <li> <a href="index.html"> Home </a></li>
+            <li> <a href="experiments.html"> Important Experiments </a></li>
+            <li> <a href="physicists.html"> Famous Physicists </a></li>
+        </ul>
+        </nav>
+    </header>
+    <main id="main_content">
+        <h1>Famous Physicists</h1>
+        <div id="preview_img_div">
+            <i id = "left_chevron" class="fa-solid fa-chevron-left" onclick="left_scroll(this)"></i>
+            <i id = "right_chevron" class="fa-solid fa-chevron-right" onclick="right_scroll(this)"></i>
+            <i id = "close_btn" class="fa-solid fa-xmark"></i>
+            <img id="preview_img" class="" src="" alt="">
+            <p id="preview_caption"></p>
+        </div>
+        <ul class="physicists_image">
+            <li><img id = "0" class="image_view" src="Image/Galileo_Galilei_.jpg" alt="Galileo Galilei">
+                <p><b>Galileo Galilei</b> <br> Foundations of modern experimental physics</p></li>
+            <li><img id = "1" class="image_view" src="Image/Portrait_of_Sir_Isaac_Newton,_1689_(brightened).jpg" alt="Isaac Newton">
+                <p><b>Isaac Newton</b> <br> Laws of motion and gravity</p></li>
+            <li><img id = "2" class="image_view" src="Image/Michael_Faraday_sitting_crop.jpg" alt="Michael Faraday">
+                <p><b>Michael Faraday </b><br> Electromagnetism and electric motors</p></li>
+            <li><img id = "3" class="image_view" src="Image/James-Clerk-Maxwell-1831-1879.jpg" alt="James Clerk Maxwell">
+                <p><b>James Clerk Maxwell</b> <br> Electromagnetic field theory</p></li>
+            <li><img id = "4" class="image_view" src="Image/Marie_Curie_1903.jpg" alt="Marie Curie">
+                <p><b>Marie Curie</b> <br> Radioactivity</p></li>
+            <li><img id = "5" class="image_view" src="Image/Einstein_patentoffice_full_(cropped).jpg" alt="Albert Einstein">
+                <p><b>Albert Einstein</b> <br> Theory of relativity and photoelectric effect</p></li>               
+            <li><img id = "6" class="image_view" src="Image/Niels_Bohr.jpg" alt="Niels Bohr">
+                <p><b>Niels Bohr</b> <br> Atomic structure and quantum theory</p></li>
+            <li><img id = "7" class="image_view" src="Image/Erwin_Schrödinger_-_Narodowe_Archiwum_Cyfrowe_(1-E-939).jpg" alt="Erwin Schrödinger">
+                <p><b>Erwin Schrödinger</b><br>  Quantum Mechanics </p></li>
+            <li><img id = "8" class="image_view" src="Image/Sir_CV_Raman.JPG" alt="C.V. Raman">
+                <p><b>C. V. Raman</b> <br>Raman Effect</p></li>
+            <li><img id = "9" class="image_view" src="Image/Stephen_Hawking.jpg" alt="Stephen Hawking">
+                <p><b>Stephen Hawking</b><br> Black holes and cosmology</p></li> 
+        </ul>
+    </main>
+    
+    <a href="#main_content" id = "top_link">Jump to the Top</a>
+    <footer>
+        All the images are taken from <a href="https://commons.wikimedia.org/wiki/Main_Page"> Wikimedia Commons </a>
+    </footer>    
+</body>
+<script type="text/javascript">
+    document.getElementById("nav_button").addEventListener("click", toggle_nav);
+    document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".image_view").forEach(element => {
+        element.addEventListener("click", image_view);
+    });
+
+    document.getElementById("close_btn").addEventListener("click", image_close);
+});    
+</script>
+</html>

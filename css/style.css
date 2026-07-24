@@ -1,0 +1,224 @@
+
+nav{
+    font-size: 150%;
+    background-color: #f5ae81; 
+    /* #f5ae81 */
+    /* #eeae86ed */
+    width: 100%;
+    align-content: center;
+    /* margin: 0 auto; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* border-radius: 10px; */
+    padding: 5px;
+    /* position: fixed; */
+    top: 0;
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+    z-index: 0;
+    display: none;
+}
+#nav_button{
+    cursor: pointer;
+}
+ul{
+    list-style-type: none;
+}
+nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+nav a{
+    text-decoration: none;
+}
+
+.link_to_main{
+    position: absolute;
+    left: -9999px;
+    z-index: 1;
+}
+
+.link_to_main:focus{
+    left: 15px;
+    top: 40px;
+}
+
+main{
+  width: 90%;
+  margin: 5% auto; 
+  padding: 20px; 
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+  text-align: center;
+}
+
+.image_view{
+    width: 50%;
+    cursor: pointer;
+}
+
+ul p{
+    font-size: 120%;
+}
+.top_link{
+    margin-bottom: 5%;
+}
+
+
+#preview_img_div {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#preview_img {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    margin-top:2%;
+    border: #000 solid 0.1em;
+    /* background-color: white; */
+}
+
+#preview_caption {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#close_btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+#left_chevron {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#right_chevron {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+footer{
+  text-align: center;
+  margin-top: 20px;
+  background-color: #f09156cc;
+  font-size: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+  border-radius: 10px;
+  padding:20px 30px;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a:hover{
+    background-color: #f5ba94;
+    border: 2px solid #fa9c62;
+    margin: auto -2px auto -2px;
+}
+
+nav a:focus{
+    background-color: #f5ba94;
+    border: 2px solid #fa9c62;
+    margin: auto -2px auto -2px;
+}
+  
+
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* @media (prefers-color-scheme: dark){
+    .fields_physics p{
+        color: antiquewhite;
+        background-color: #000;
+    } 
+} */
+
+
+@media all and (min-width:772px){
+    #nav_button{
+    display: none;
+    }
+    .image_view{
+        width: 70%;
+    }
+    nav{
+        display: block;
+        /* margin-left: 50%;
+        transform: translateX(-50%); */
+        align-content: center;
+        margin: 0 auto;
+        border-radius: 10px;
+        position: fixed;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10vh;
+    }
+    nav li{
+        margin: auto;
+    }
+    .fields_physics{
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+    .physicists_image{
+        display: grid;
+        grid-template-columns: 45% 45%;
+    }
+    main{
+        margin-top: 15%;
+        width: 80%;
+    }
+     
+}
+
+@media all and (min-width:992px){
+    .fields_physics{
+        grid-template-columns: 30% 30% 30%;
+    }
+    .physicists_image{
+        grid-template-columns: 30% 30% 30%;
+    }
+}
