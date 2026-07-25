@@ -40,6 +40,11 @@ function image_view(event) {
         console.log("Right");
         document.getElementById("right_chevron").click();
         break;
+
+    case "Escape":
+        console.log("Escape");
+        document.getElementById("close_btn").click();
+        break;
   }
 });
 }
